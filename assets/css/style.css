@@ -186,7 +186,7 @@ h2 {
   color: #333;
   letter-spacing: .2px;
   line-height: 1.1;
-  font-size: 32px;  
+  font-size: 32px;
   text-transform: capitalize;
   margin-bottom: 14px;
 }
@@ -223,6 +223,7 @@ h6 {
   margin-bottom: 15px;
 }
 
+
 p {
   margin: 0 0 15px;
   font-size: 14px;
@@ -239,7 +240,7 @@ ul {
 
 /***********************************************************************************************/
 /* =Preloader */
-/***********************************************************************************************/ 
+/***********************************************************************************************/
 
 #preloader {
   background-color: #FFF;
@@ -857,7 +858,7 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
 
 .pdetail-list {
   margin-top: 20px;
-} 
+}
 
 .pdetail-list li {
   list-style-type: none;
@@ -890,10 +891,10 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
 
 .work-navigation {
   width: 100%;
-  background: #fff; 
+  background: #fff;
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 2px;  
+  letter-spacing: 2px;
   z-index: 99;
 }
 
@@ -918,12 +919,12 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
 }
 
 .work-navigation a,
-.work-navigation a:visited { 
-  color: #555; 
+.work-navigation a:visited {
+  color: #555;
 }
 
-.work-navigation a:hover{ 
-  color: #111; 
+.work-navigation a:hover{
+  color: #111;
 }
 
 .work-navigation a span {
@@ -951,7 +952,7 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #151515; 
+  color: #151515;
 }
 
 .work-prev {
@@ -1117,6 +1118,10 @@ h6.progress-title, h6.progress-value {
   margin-top: 15px;
 }
 
+h6.email-address {
+  font-size: 15px;
+}
+
 .light-grey-bg {
   background: #f8f8f8;
 }
@@ -1255,7 +1260,7 @@ h2 {
   color: #333;
   letter-spacing: .2px;
   line-height: 1.1;
-  font-size: 20px;  
+  font-size: 20px;
   text-transform: capitalize;
   margin-bottom: 14px;
 }
@@ -1297,7 +1302,7 @@ p {
   .grid-items .gallery-item {
     padding: 5px;
   }
-	
+
 }
 
 @media only screen and (max-width: 500px) {
