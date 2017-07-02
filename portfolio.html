@@ -119,7 +119,7 @@
   <!-- Hero
   ================================================== -->
   <section>
-    <div id="hero-contact-section" class="height-fill" data-stellar-background-ratio="0">
+    <div id="hero-porfolio-section" class="height-fill" data-stellar-background-ratio="0">
     </div> <!-- End hero-section -->
     <div class="boxed-hero-content">
       <div class="vertical-align-table">
@@ -128,8 +128,8 @@
           <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
               <div class="boxed-hero-text">
-                <h1 class="hero-title">Get In Touch</h1>
-                <h2 class="hero-description">Let's keep in touch</h2>
+                <h1 class="hero-title">Portfolio</h1>
+                <h2 class="hero-description">Our amazing works</h2>
               </div> <!-- End hero-text -->
             </div> <!-- end col-md-6 -->
           </div> <!-- end row -->
@@ -140,76 +140,140 @@
   </section>
   <!-- End hero section -->
 
-  <!-- Contact section
-  ================================================== -->
-  <section>
-    <div id="contact-section" class="page-section">
-      <div class="container">
-        <div class="row">
+    <!-- Portfolio
+    ================================================== -->
+    <section>
+      <div id="portfolio-section" class="page-section">
+        <div class="portfolio-content">
 
-          <div class="col-md-7 col-md-offset-1">
-            <div class="contact-head">
-              <h5>Contact details</h5>
-              <p>Please feel free to get in touch anytime, whether for work inquiries or to just say hello. <br> I am currently accepting new freelance projects, and always excited to hear interesting proposals.</p>
-            </div>
-            <div class="contact-user-form">
-              <form action="assets/php/contact.php" method="post" name="contactform" id="contactform">
-                <fieldset>
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                      <label for="name">Name</label>
-                        <input class="form-control" type="text" name="name" id="name" placeholder="Name">
-                      </div> <!-- end form-group -->
-                    </div> <!-- end col-sm-6 -->
-                    <div class="col-sm-6">
-                      <div class="form-group">
-                      <label for="email">email</label>
-                        <input class="form-control" type="email" name="email" id="email" placeholder="Email">
-                      </div> <!-- end form-group -->
-                    </div> <!-- end fcol-sm-6-->
-                    <div class="col-sm-12">
-                      <div class="form-group">
-                      <label for="message">Message</label>
-                        <textarea rows="10" class="form-control" name="message" id="message" placeholder="Message..."></textarea>
-                      </div> <!-- end form-group -->
-                    </div> <!-- end col-sm-12 -->
-                  </div> <!-- end row -->
-                </fieldset>
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <input type="submit" name="submit" value="Send message" id="submit" class="btn submit-btn btn-clean">
-                    </div> <!-- end form-group -->
-                  </div> <!-- end col-sm-12 -->
-                  <div id="alert" class="col-md-8"></div>
-                </div> <!-- end row -->
-              </form>
-            </div>
-          </div>
+          <div class="filter-control">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12">
+                  <ul class="filter-list">
+                    <li><a class="filter active" data-filter="*">All</a></li>
+                    <li><a class="filter" data-filter=".branding">Branding</a></li>
+                    <li><a class="filter" data-filter=".web">Web</a></li>
+                    <li><a class="filter" data-filter=".photography">Photography</a></li>
+                  </ul>
+                </div> <!-- end col-xs-12 -->
+              </div> <!-- end row -->
+            </div> <!-- end container -->
+          </div> <!-- end filter-control -->
 
-          <div class="col-md-3">
-            <div class="contact-about-content">
-              <h5>Contact Info</h5>
-              <div class="contact-img">
-                <img src="assets/images/temp/ava.png" alt="">
-              </div>
-              <ul class="contact-list"><li><a href="#">hello@website.com</a></li><li>+44 (0) 123-456-7890 (Office)</li><li>@twitter</li></ul>
-              <ul class="social">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li class="hidden-xs"><a href="#"><i class="fa fa-flickr"></i></a></li>
-              </ul>
-            </div>
-          </div>
+          <div class="portfolio-items">
 
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Contact section -->
+            <div class="container">
+              <div class="row grid-items gallery-masory" id="filter">
+
+                <div class="col-md-4 col-xs-6 gallery-item photography">
+                  <div class="project-item">
+                    <a href="single-project.html">
+                      <img src="assets/images/portfolio/1.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>photography / web</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+                <div class="col-md-4 col-xs-6 gallery-item photography">
+                  <div class="project-item">
+                    <a href="single-project-2.html">
+                      <img src="assets/images/portfolio/2.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>photography / web</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+                <div class="col-md-4 col-xs-6 gallery-item web">
+                  <div class="project-item">
+                    <a href="single-project.html">
+                      <img src="assets/images/portfolio/3.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>web</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+
+                <div class="col-md-4 col-xs-6 gallery-item web">
+                  <div class="project-item">
+                    <a href="single-project.html">
+                      <img src="assets/images/portfolio/4.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>branding</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+
+                <div class="col-md-4 col-xs-6 gallery-item branding web">
+                  <div class="project-item">
+                    <a href="single-project-2.html">
+                      <img src="assets/images/portfolio/5.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>branding</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+                <div class="col-md-4 col-xs-6 gallery-item photography branding web">
+                  <div class="project-item">
+                    <a href="single-project-2.html">
+                      <img src="assets/images/portfolio/6.jpg" alt="">
+                      <div class="overlay">
+                        <div class="vertical-align-table">
+                          <div class="overlay-inner">
+                            <h5>Project Title</h5>
+                            <span>branding</span>
+                          </div> <!-- End overlay-inner -->
+                        </div>
+                      </div> <!-- End overlay -->
+                    </a>
+                  </div><!-- End project-item -->
+                </div> <!-- End col-md-3 -->
+
+              </div> <!-- End gallery-masory -->
+            </div> <!-- end container -->
+
+          </div> <!-- end portfolio-items -->
+
+        </div> <!-- end portfolio-content -->
+      </div> <!-- end portfolio-section -->
+    </section>
+    <!-- Portfolio -->
 
   <!-- Footer
   ================================================== -->
