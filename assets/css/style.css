@@ -382,6 +382,19 @@ ul {
   bottom: 12%!important;
 }
 
+.video_background {
+position: absolute;
+bottom: 0px;
+right: 0px;
+min-width: 100%;
+min-height: 100%;
+left: 0px;
+/*width: auto;
+#height: 100%;*/
+z-index: -1000;
+overflow: hidden
+}
+
 /***********************************************************************************************/
 /* =Head page */
 /***********************************************************************************************/

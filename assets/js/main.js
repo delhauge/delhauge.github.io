@@ -10,31 +10,65 @@ $(document).ready(function() {
     /* ==============================================
         Full height home-section
     =============================================== */
-    
+
         var windowHeight = $(window).height(),
               topSection = $('#hero-section'),
               headerHeight = $(".navbar").outerHeight(),
               calculatedHeight = windowHeight - headerHeight;
         topSection.css('height', calculatedHeight);
-    
+
         $(window).resize(function(){
             var windowHeight = $(window).height(),
           headerHeight = $(".navbar").outerHeight(),
           calculatedHeight = windowHeight - headerHeight;
-          topSection.css('height', calculatedHeight);      
+          topSection.css('height', calculatedHeight);
         });
 
     /* ==============================================
         Hero slider
-    =============================================== */  
+    =============================================== */
 
         $('#slides').superslides({
-            play: 6000,
+            play: 10000,
             animation_speed: 800,
             pagination: true,
             navigation: false,
             animation: 'fade'
         });
+
+        // BACKGROUND VIDEOS
+        // On page load or slide change STOP/PAUSE all videos and START playing video on current slide
+        /*$(this).on('animated.slides', function() {
+                console.log('Slide swtich');
+                 // get current slide using superslides API current
+                 var currentSlideIndex = $('#slides').superslides('current');
+                 console.log("Current slide index: " + currentSlideIndex);
+                 //var currentSlide = $('.slides-container > li')[currentSlideIndex];
+                // pause all videos
+                //$("video").each(function () { this.load(); });
+                // if there is a video on current slide, play it
+                //$("video")[currentSlideIndex].load();
+                $("video")[currentSlideIndex].currentTime = 0;
+                $("video")[currentSlideIndex].play();
+        });*/
+
+        $(window).load(function() {
+            $("video").each(function () { this.play(); });
+        });
+
+        /*$(window).load(function() {
+                 // get current slide using superslides API current
+                 var currentSlideIndex = $('#slides').superslides('current');
+                 //var currentSlide = $('.slides-container > li')[currentSlideIndex];
+                var currentSlide = $('.slides-container')[currentSlideIndex];
+                // pause all videos
+                $("video").each(function () { this.pause(); });
+                // if there is a video on current slide, play it
+                var currentVid = $(currentSlide).find("video")[0];
+                if ($(currentVid).length) {
+                    $(currentVid)[0].oncanplaythrough = $(currentVid)[0].play();
+                }
+        }); */
 
     /* ==============================================
     superslider swipe on mobile devices
@@ -52,7 +86,7 @@ $(document).ready(function() {
 
     /* ==============================================
         Smooth Scroll on anchors
-    =============================================== */  
+    =============================================== */
 
 
         $('.one-page-nav').find('a').addClass('section-scroll');
@@ -90,7 +124,7 @@ $(document).ready(function() {
     /* ==============================================
         Parallax
     =============================================== */
-    
+
         $.stellar({
             responsive: true,
             horizontalScrolling: false,
@@ -99,7 +133,7 @@ $(document).ready(function() {
 
     /* ==============================================
         BxSlider Testimonial
-    =============================================== */ 
+    =============================================== */
 
         $(".testimonials-slider").bxSlider({
             auto: true,          // Boolean:  (true/false)
@@ -108,29 +142,29 @@ $(document).ready(function() {
             controls: false,
             useCSS: false        // Boolean:  (true/false)
         });
-        
+
     /* ==============================================
         Counter increment
     =============================================== */
 
-        function countUp() {   
-            var dataperc;   
+        function countUp() {
+            var dataperc;
             $('.statistic-percent').each(function(){
                 dataperc = $(this).attr('data-perc'),
                 $(this).find('.percentfactor').delay(6000).countTo({
                     from: 0,                 // number to begin counting
-                    to: dataperc,      
+                    to: dataperc,
                     speed: 1000,             // ms
                     refreshInterval: 10,
-                });  
+                });
             });
-        }   
-        
+        }
+
         $('.statistic-percent').waypoint(function() {
             countUp();
         },
         {
-            offset: '95%',                 
+            offset: '95%',
             triggerOnce: true
         });
 
@@ -237,15 +271,15 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
 
-    	if ( 
+    	if (
 
     		$(this).scrollTop() > 500
 
-    		) 
+    		)
     	{
 
            $('.back-to-top').fadeIn();
-    	} 
+    	}
 
         else {
 
@@ -258,7 +292,7 @@ $(document).ready(function() {
             /* Act on the event */
 
             $('html, body').animate({
-                scrollTop: 0, 
+                scrollTop: 0,
                 easing: 'swing'
             }, 750)
         });
@@ -278,7 +312,7 @@ $(document).ready(function() {
 
     // will first fade out the loading animation
     $("#loading-animation").fadeOut();
-    
+
     /* ==============================================
     Isotope
     =============================================== */
@@ -295,7 +329,7 @@ $(document).ready(function() {
                 $(".filter.active").removeClass("active");
                 $(this).addClass("active");
                 var selector = $(this).attr('data-filter');
-                container.isotope({ 
+                container.isotope({
                     filter: selector
                 });
                 return false;
