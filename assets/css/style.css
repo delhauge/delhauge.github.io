@@ -33,7 +33,7 @@ body {
   padding: 0 40px 0px 40px;
 }
 
-img {
+img, iframe {
   max-width: 100%;
 }
 
@@ -887,7 +887,9 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
   text-transform: capitalize;
   line-height: 32px;
   display: inline-block;
+  width: 20%;
 }
+
 
 .pdetail-list span:nth-child(2) {
   font-size: 14px;
