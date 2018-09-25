@@ -1,0 +1,19 @@
+In Animation:
+Use shuffle
+
+-Flash: great, flashy fade in like matrix
+
+-Pulse: Flickers in from nothing , difficult to see what the next is until it's complete there
+
+-Flip-InX: Nice, very subtle
+-FlipinY also
+
+-Fade in down, fade in up: falling into place
+
+
+
+Out Animation:
+Use shuffle
+
+
+

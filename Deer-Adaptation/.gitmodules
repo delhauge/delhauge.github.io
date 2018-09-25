@@ -1,0 +1,6 @@
+[submodule "jquery.ripples"]
+	path = jquery.ripples
+	url = https://github.com/sirxemic/jquery.ripples.git
+[submodule "textillate"]
+	path = textillate
+	url = https://github.com/jschr/textillate.git
