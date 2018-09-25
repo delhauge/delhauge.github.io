@@ -86,8 +86,8 @@ body {
 	<p class='tlt'></p> 
 
 	<!--Workaround for Chrome blocking autoplay of audio--->
-	<iframe src="audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-	<audio id="player" autoplay loop><source src="audio/bed.mp3" type="audio/mp3"></audio>
+	<iframe src="./audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+	<audio id="player" autoplay loop><source src="./audio/bed.mp3" type="audio/mp3"></audio>
 
 
 
@@ -182,7 +182,7 @@ $('body').click(function(){
 			$('p').textillate('in');
 
 			//Start audio clip
-			var audio_clip = new Audio("audio/"+String(section_id)+".mp3");
+			var audio_clip = new Audio("./audio/"+String(section_id)+".mp3");
 			click_freeze = true;
 			audio_clip.onended = function() {click_freeze = false;};
 			audio_clip.play();
