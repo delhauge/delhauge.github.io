@@ -5,17 +5,22 @@
 <head>
 
 <title> The Deer </title>
+<meta charset="utf-8"/>
 
 <style>
+/*html{
+	height: 100%;
+}*/
+
+
 body {
-    background-image: url(background-image.jpg) !important;
-    background-size: cover;
     text-align: center;
+    background-color: black;
 }
 
-/*body:before {
+/*body::before{
 	content: '';
-	display: inline-block;
+	display:inline;
 	vertical-align: middle;
 	height: 100%;
 }*/
@@ -39,9 +44,20 @@ body {
 	font-size: 30px;
 }
 
+main {
+	display: inline;
+	vertical-align: middle;
+	background: url(img/bg.jpg);
+	padding:  100px;
+	width:100%;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
 </style>
 
 <link rel="stylesheet" type="text/css" href="http://textillate.js.org/assets/animate.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -49,12 +65,25 @@ body {
 <script src="http://textillate.js.org/assets/jquery.lettering.js"></script>
 <script src="http://textillate.js.org/jquery.textillate.js"></script>
 
-<script>
+</head>
+
+<body>
+
+<main>
+	<h1 class="title">The Deer</h1>
+
+	<button class="w3-button w3-xxlarge w3-round-large w3-border w3-border-white w3-hover-white w3-padding-small" style="color:white; font-family: Baskerville; margin-top:100px; " type="button" onclick="start()">BEGIN</button>
+
+	<p class='tlt'></p> 
+</main>
+
+
+<script> 
 //Rippling water effect
 	$(document).ready(function() {
 	try {
 		$('body').ripples({
-			resolution: 512,
+			resolution: 700,
 			dropRadius: 20, //px
 			perturbance: 0.2,
 		});
@@ -62,39 +91,7 @@ body {
 	catch (e) {
 		$('.error').show().text(e);
 	}
-
-	$('.js-ripples-disable').on('click', function() {
-		$('body, main').ripples('destroy');
-		$(this).hide();
-	});
-
-	$('.js-ripples-play').on('click', function() {
-		$('body, main').ripples('play');
-	});
-
-	$('.js-ripples-pause').on('click', function() {
-		$('body, main').ripples('pause');
-	});
 });
-</script>
-
-</head>
-
-<body>
-	<h1 class="title">The Deer</h1>
-
-	<p class='tlt'></p> 
-
-	<!--Workaround for Chrome blocking autoplay of audio--->
-	<iframe src="./audio/silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
-	<audio id="player" autoplay loop><source src="./audio/bed.mp3" type="audio/mp3"></audio>
-
-
-
-</body>
-
-<script> 
-
 
 //Set textillate to turn on
 $(function () {
@@ -116,6 +113,21 @@ $(function () {
 		},
 	});
 });
+</script>
+</body>
+
+<script>
+
+try {
+	$('body').ripples({
+		resolution: 700,
+		dropRadius: 20, //px
+		perturbance: 0.2,
+	});
+}
+catch (e) {
+	$('.error').show().text(e);
+}
 
 text = `There were no deer. 
 This I mutter under my breath. 
@@ -147,7 +159,7 @@ The man in the coat smiles. And how fast was I going?
 How fast was I going -  if a deer runs and then hits the car - if a deer - suppose there were a deer - it would be dead before I saw it, anyway, if I gripped the steering wheel tight enough - if I gripped the steering wheel and turned out of the curve, away from the deer - meaning the wheel shifts and the cars light suddenly shines away. But by then the deer would be bouncing off the car - 
 The man with the pencil furrows his brow. Another man taps him on the shoulder and they walk toward the center of the flashing lights. 
 I lean back and swing my feet out over the edge of the road, gravel pinning my head. 
-At the top of the wooded hill a little girl pops her head out a window. 
+At the top of the wooded hill a little girl pops her head out of a window. 
 I follow her gaze to an old oak where the red lights flash. The leaves hang limply like a swarm of sleeping bats, noses sharpening to the curve of the rain. I call to her. 
 The light goes off.
 Was I driving too fast? 
@@ -160,40 +172,50 @@ my breath pulled.
 Remember when mother used to show us how to catch water from an icicle and slurp it up, Arthur? And I'd try and slurp yours up and you'd splash it in my face. 
 Focus, I'd think, and the water fell slower. I slurped and it tasted like iron so I pushed it to the back of my throat and it bubbled and I felt cold and  my temples stung. 
 Where did she go? My hands are sticky and red. I turn. 
-The red trail pushes back, back onto the road mixing with the swirling rainwater and the crunch of the boots of the policemen and the now stamping hoofs of a little baby dear, held by the nape in the arms of a man in orange, the glint of a knife withdrawing, one black eye directly on me.  
+The red trail pushes back, back onto the road mixing with the swirling rainwater and the crunch of the boots of the policemen and the now stamping hoofs of a little baby dear, held by the nape in the arms of a man in orange, the glint of a knife withdrawing, one black eye directly on me. 
+END OF CHAPTER 1 
 `
 
- 
-sections = text.split('\n');
-number_of_clicks = 0;
-section_id = 0;
-var click_freeze = false; //If true, nothing happens when body is clicked
+//When Begin button pressed
+function start(){
+
+	$('button').remove();
+
+	console.log("Starting animation");
+	//Start Audio bed
+	var bed = new Audio("audio/bed.mp3");
+	bed.loop = true;
+	bed.play();
+
+	sections = text.split('\n');
+	number_of_clicks = -1;
+	section_id = 0;
+	var click_freeze = false; //If true, nothing happens when body is clicked
 
 
-$('body').click(function(){
+	$('body').click(function(){
 
-	if (!click_freeze) {
-		number_of_clicks++;
-		section_id = Math.floor(number_of_clicks/2);
+		if (!click_freeze) {
+			number_of_clicks++;
+			section_id = Math.floor(number_of_clicks/2);
 
- 
-		if (number_of_clicks % 2 == 1){ //If odd number clicks, make text appear
-			$('p').find('.texts li:first').text(sections[section_id]);
-			$('p').textillate('in');
+	 
+			if (number_of_clicks % 2 == 1){ //If odd number clicks, make text appear
+				$('p').find('.texts li:first').text(sections[section_id]);
+				$('p').textillate('in');
 
-			//Start audio clip
-			var audio_clip = new Audio("./audio/"+String(section_id)+".mp3");
-			click_freeze = true;
-			audio_clip.onended = function() {click_freeze = false;};
-			audio_clip.play();
+				//Start audio clip
+				var audio_clip = new Audio("audio/"+String(section_id)+".mp3");
+				click_freeze = true;
+				audio_clip.onended = function() {click_freeze = false;};
+				audio_clip.play();
+			}
+			else { //If even number clicks, get rid of text
+				$('p').textillate('out');
+			}
 		}
-		else { //If even number clicks, get rid of text
-			$('p').textillate('out');
-		}
-	}
-});
-
-
+	})
+};
 
 
 
