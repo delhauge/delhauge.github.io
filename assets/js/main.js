@@ -8,6 +8,16 @@ $(document).ready(function() {
 	/* global google: false */
 
     /* ==============================================
+        Consistent template edits to each page
+    =============================================== */
+    if (!window.location.pathname.includes('index.html'))
+        $('nav li:eq(1)').after('<li><a href="publications.html">Publications</a></li>');
+    $('.policy-box').html(`<ul>
+                <li><span>© Dashiel Carrera 2018 . All rights reserved. </span></li>
+                <li><a href="mailto:dashiel.carrera@gmail.com">dashiel.carrera@gmail.com</a></li>
+              </ul>`)
+
+    /* ==============================================
         Full height home-section
     =============================================== */
 
