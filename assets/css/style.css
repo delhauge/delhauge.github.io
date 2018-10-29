@@ -175,7 +175,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 
 h1, .h1 {
   color: #fff;
-  font-size: 60px;
+  font-size: 80px;
   text-transform: capitalize;
   font-weight: 400;
   letter-spacing: 1.2px;
@@ -355,7 +355,6 @@ ul {
 }
 
 .simple-hero-text h2.hero-description, .boxed-hero-text h2.hero-description {
-  font-size: 14px;
   font-weight: 400;
   letter-spacing: .4px;
 }
@@ -364,6 +363,7 @@ ul {
   color: #f3f3f3;
   letter-spacing: 1px;
   line-height: 1.7;
+  font-size: 1.5vw;
 }
 
 .boxed-hero-text .call-to-action {
