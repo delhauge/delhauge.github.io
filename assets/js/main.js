@@ -22,6 +22,8 @@ $(document).ready(function() {
                 <li><a href="https://www.linkedin.com/in/dashiel-carrera-652a296b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
               </ul>`);
+    if ($('nav li:eq(4)').text()=='Skills')
+        $('nav li:eq(4)').remove();
 
     /* ==============================================
         Full height home-section
