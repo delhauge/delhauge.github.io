@@ -11,7 +11,6 @@ $(document).ready(function() {
         Consistent template edits to each page
     =============================================== */
     document.title="Dashiel Carrera";
-    $('nav li:eq(1)').after('<li><a href="publications.html">Publications</a></li>');
     $('.policy-box').html(`<ul>
                 <li><span>© Dashiel Carrera 2018 . All rights reserved. </span></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com">dashiel.carrera@gmail.com</a></li>
