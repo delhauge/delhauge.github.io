@@ -10,6 +10,7 @@ $(document).ready(function() {
     /* ==============================================
         Consistent template edits to each page
     =============================================== */
+    document.title="Dashiel Carrera";
     if (!window.location.pathname.includes('index.html'))
         $('nav li:eq(1)').after('<li><a href="publications.html">Publications</a></li>');
     $('.policy-box').html(`<ul>
@@ -19,7 +20,7 @@ $(document).ready(function() {
     $('.fixed-footer-social').html(`<ul>
                 <li><a href="https://twitter.com/dashiel_carrera" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://github.com/delhauge" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/dashiel-carrera-652a296b/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/dashiel-carrera/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
               </ul>`);
     if ($('nav li:eq(4)').text()=='Skills')
