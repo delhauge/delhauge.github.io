@@ -10,6 +10,13 @@ $(document).ready(function() {
     /* ==============================================
         Consistent template edits to each page
     =============================================== */
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        console.log('iphone');
+        $('#hero-slider-section').remove();
+       $('.boxed-hero-content').remove();
+    }
+
+
     document.title="Dashiel Carrera";
     $('.policy-box').html(`<ul>
                 <li><span>© Dashiel Carrera 2018 . All rights reserved. </span></li>
