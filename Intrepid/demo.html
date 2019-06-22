@@ -1,0 +1,96 @@
+<!-- Include stylesheet -->
+<link href="quill.snow.css" rel="stylesheet">
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
+<!-- Main html -->
+<div id="main"> 
+
+	<h1 style="font-family: Georgia; text-align: center">Intrepid</h1>
+	<h2 style="text-align:center">The Exploratory Word Processor</h2>
+	<h3 style="font-family: Helvetica; text-align:center">By Dashiel Carrera</h3>
+
+	<div style="display: none" id="clock-controls">
+		<fieldset>
+			<legend>Race the Clock</legend>
+			Min WPM: <input id="min-wpm" type="number" value='25'><br>
+			Challenge Length (min): <input id="race-length" type="number" value='5'><br>
+			<button id="startClock" onclick="startClock()">Start</button><br><br>
+			Current Rate (wpm): <div id='wordRate'>60</div>
+			Time Remaining: <div id="timer">0:00</div>
+		</fieldset>
+	</div>
+	Word Count: <div style="display: inline;"id='counter'>0</div> 
+
+
+	<div id="toolbar">
+	<button class="ql-bold"></button>
+	<button class="ql-italic"></button>
+	<button onclick="toggleMode('Speech')" class="btn" id="speech"><i class="fa fa-volume-up fa-lg"></i></button>
+	<button onclick="toggleMode('Focus')" id="focus"><i class="fa fa-i-cursor fa-lg"></i></button>
+	<button onclick="toggleRaceControls()" id="race"><i class="fa fa-clock-o fa-lg"></i></button>
+	</div>
+
+	<div id="editor"></div>
+</div>
+
+
+<!-- Include the Quill library -->
+<script src="quill.js"></script>
+
+<!--Include modules -->
+<script src="counter_module.js"></script>
+<script src="speech_module.js"></script>
+<script src="focus_module2.js"></script>
+<script src="race_module.js"></script>
+<script src="nodelete_module.js"></script>
+
+<!-- Initialize Quill editor -->
+<script>
+	//Instantiate variables for broad scope usage
+	var wordCount = 0;
+
+	//Setup quill
+  	var quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+    	WordCounter: true,
+    	Speech: true,
+    	Focus: true,
+    	RaceTheClock: true,
+    	toolbar: '#toolbar'
+    }
+  });
+
+	 //Reveal Race The Clock controls
+	 function toggleRaceControls(){
+	 	var controls = document.getElementById('clock-controls');
+	 	if (controls.style.display == 'none'){
+	 		controls.style.display = 'block';
+	 	}
+	 	else {
+	 		controls.style.display = 'none';
+	 	}	
+	 }
+
+	 //Race the Clock start
+	 var endTime = 0;
+	 var startTime = 0;
+	 var clock = 0;
+	 var startWordCount = 0;
+	 function startClock(){
+	 	startTime = clock;
+	 	startWordCount = wordCount;
+	 	endTime = clock + document.getElementById('race-length').value*60;
+	 	modeToggle['RaceTheClock'] = true;
+	 	document.getElementById('startClock')
+
+	 }
+
+	 //Toggle modes
+	 var modeToggle = {'Speech': false, 'Focus': false, 'RaceTheClock': false};
+	 function toggleMode(mode){
+	 	modeToggle[mode] = 1 - modeToggle[mode];
+	 }
+
+</script>
