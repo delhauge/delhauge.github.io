@@ -47,7 +47,7 @@
 
 <!-- Initialize Quill editor -->
 <script>
-	//Instantiate variables for broad scope usage
+	//Instantiate variable for broad scope usage
 	var wordCount = 0;
 
 	//Setup quill
@@ -61,6 +61,8 @@
     	toolbar: '#toolbar'
     }
   });
+  	quill.root.setAttribute('spellcheck', false);
+  	
 
 	 //Reveal Race The Clock controls
 	 function toggleRaceControls(){
