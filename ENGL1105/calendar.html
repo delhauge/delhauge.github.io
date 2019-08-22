@@ -106,9 +106,7 @@
     <!-- Javascript -->
         <!--Load file for CSV-->
     <script>
-        var csv = $.get({
-            url : "http://www.dashielcarrera.com/ENGL1105/static/docs/Calendar.csv",
-        });
+        var csv = $.get("static/docs/Calendar.csv");
         //csv = 'date,topic,lesson plan,due'
         var arrays = $.csv.toArrays(csv);
 
