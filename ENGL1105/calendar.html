@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <title>Calendar - ENGl1105</title>
+    <meta content='Introduction to Discrete Structures and Probability, Spring 2019' name='description'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <!-- jQuery and Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.5/jquery.csv.min.js" type="text/javascript"></script>
+    <!-- CSS -->
+    <link href="static/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="static/css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="documents.html#">ENGL1105</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li class="active"><a href="calendar.html">Calendar</a></li>
+                    <li><a href="documents.html">Resources</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section class="jumbotron assignments">
+        <div class="container">
+            <h1>Calendar</h1>
+        </div>
+    </section>
+    <section class="next-lecture">
+        <div class="container highlight-card">
+			<!--<h3 class="small-caps">Next Lecture</h3>
+            <!-- Automatically set by script; please do not touch -->
+            <!-- <p class="next-lecture-title"></p>
+            <p class="next-lecture-date"></p> -->
+        <!-- </div> -->
+    <!-- </section> -->
+    <!-- <section class="lecture-table"> -->
+        <!-- <div class="container"> -->
+			<h3>Class</h3>
+			<p>Class will take place from 8:00-8:50am on Monday, Wednesday, and Friday in McBryde 328.</p>
+            <h4>Mondays - Lab/Activity</h4>
+                <p>We will work on developing specific skills which will be useful for your upcoming projects. Occasionally, I will give a brief lecture. </p>
+            <h4>Wednesdays - Discussion</h4>
+                <p>
+                    These dicussions will be about an assigned reading. Your reading respone is due at 8:00AM each Tuesday.These responses are to be pasted into a group Google Doc, the link for which you can find below. Two students will be named discussion leaders each week, and will be responsible for reading everyone's responses, bringing in at least 5 questions for discussion, and keeping the discussion going.
+                </p>
+            <h4>Fridays - Project Day</h4>
+                <p>
+                    On project days we will do an activity which will become part of your project. These activities may take the form of brainstorms, peer review, or something else.
+                </p>
+            <h4>Journal</h4>
+            <p>We will be doing prompted journal writing for 10 minutes at the beginning of each class. This writing must go into a Google Doc in your Google Drive folder.</p>
+            <table class="table lectures">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Topics</th>
+                        <th>Lesson Plan</th>
+                        <th>Due</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <div class="cafe"> <img src="static\images\cafe.jpg"> </div>
+    <footer class="footer">
+        <div class="container" class>
+            <p class="col-xs-12 col-sm-6 col-md-6">
+                ENGL1105 Fall 2019 &bull;
+                <a href="http://www.dashielcarrera.com/">GTA Dash Elhauge</a>
+                <a href="mailto:delhauge@vt.edu">
+            </p>
+        </div>
+    </footer>
+    <!-- Javascript -->
+        <!--Load file for CSV-->
+    <script>
+        var csv = $.get({
+            url : "static/docs/Calendar.csv",
+        });
+        //csv = 'date,topic,lesson plan,due'
+        var arrays = $.csv.toArrays(csv);
+
+        for (var i=0; i<arrays.length;i++){
+            var new_row = $('<tr></tr>');
+            for (var j=0; j<arrays[0].length;j++){
+                var entry = $('<td></td>').text(arrays[i][j]);
+                new_row.append(entry);
+            }
+            $('tbody').append(new_row);
+        }
+    </script>
+    <script src="static/js/moment.min.js"></script>
+    <script src="static/js/lectures.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,934 @@
+/** Main Styles */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+::selection {
+    color: #36907b;
+    background: #fff;
+  }
+
+body {
+    color: #333333;
+    /*font-family: 'Courier New', Courier, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Amatic SC', cursive;*/
+    /*font-family: "Randall";*/
+    font-size: 1.6em;
+    background: url('../images/sandwich-background.png');
+    background-size: 300px;
+    background-repeat: repeat;
+
+    position: relative;
+    height: 100%;
+    padding-bottom: 500px;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -webkit-font-smoothing: antialiased;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+.container {
+    width: 100%;
+    max-width: 1060px !important;
+    padding: 10px 30px;
+    margin: 0 auto;
+}
+
+.highlight-card {
+    min-height: 200px;
+    margin-top: -200px;
+	  background: url('../images/retina_wood.png');
+    /* background-color: #fff; */
+    /*
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    */
+    border-radius: 5px;
+    max-width: 91%;
+}
+
+nav .container {
+    padding: 0 30px;
+}
+
+
+footer .container {
+    padding: 20px;
+
+}
+
+h1, h2, h4, h5, h6 {
+    color: #36907b;
+}
+
+
+
+h3 {
+    /*font-family: "Randall";*/
+    font-family: 'Amatic SC', cursive;
+    font-weight:700;
+    border-bottom: 1px solid #89aaa2;
+    margin-bottom: 15px;
+    color: #36907b;
+	font-size: 2.6em;
+}
+
+h3.small-caps {
+    font-size: 2.5em;
+    text-transform: lowercase;
+    font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+a, a:hover, a:active, a:focus {
+    color: #36907b;
+}
+
+.text-muted {
+    opacity: 0.6;
+    font-size: 0.9em;
+}
+
+.footnote {
+    margin-top: 30px;
+}
+
+/** Nav */
+
+.navbar {
+    background-color:#19120c;
+    position: fixed;
+    width:100%;
+    border-radius: 0;
+    border: 0;
+    z-index: 999;
+    box-shadow: rgba(63, 69, 180, 0.17255) 0px 0px 12px 0px;
+    margin-bottom: 0;
+}
+
+.nav > li > a {
+    padding: 20px;
+    /*font-family: "Randall";*/
+	font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: 700;
+    line-height: 26.4px;
+    /*padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 11px;
+    font-size: 0.96em;*/
+}
+
+.navbar-default a {
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.navbar-default .navbar-nav> li > a {
+	color: #c4c4c4;
+}
+
+.navbar-default .navbar-nav > li > a:hover, a:focus {
+    color: white;
+}
+
+.navbar-default .navbar-nav > .active > a:hover, a:focus {
+	color: white;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #fff;
+    background-color: transparent !important;
+    border-bottom: 4px solid #db907b;
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+	color:white;
+}
+
+.status {
+    display: none;
+}
+
+.status i {
+    font-size: 7px;
+    margin-bottom: 2px;
+    margin-right: 1px;
+
+    vertical-align: middle;
+    color: rgb(47, 100, 204);
+}
+
+.status.online i {
+    color: #0F9D28;
+}
+
+.pulse-ring {
+    display: none;
+
+    background-color: #0F9D28;
+    -webkit-border-radius: 100%;
+    height: 55px;
+    width: 55px;
+
+    position: absolute;
+    left: -5px;
+    top: -3px;
+
+    -webkit-animation: pulsate 1.8s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.0;
+}
+
+.pulse-ring.two {
+    -webkit-animation-delay: 0.5s;
+}
+
+.pulse-ring.three {
+    -webkit-animation-delay: 0.6s;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 0.05;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/* Center the navigation */
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+
+    .status, .online .pulse-ring {
+        display: inline-block;
+    }
+}
+
+/** Jumbotron */
+
+.jumbotron {
+    /*background-color: #ffffff;*/
+    /*background: linear-gradient(to bottom,#ffffff 0,#000000 70%);*/
+    background: url('../images/sandwich-background.png');
+	background-position: 50% 0%;
+    padding-top:80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-bottom: 200px;
+    margin-bottom: 0;
+    overflow: hidden;
+    /*font-family: "Randall";*/
+	font-family: 'Amatic SC', cursive;
+    /*font-family: 'Courier New', Courier, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-style: none;
+}
+
+.jumbotron.home{
+    background: url('../images/sandwich-background');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: 50% 0%;
+}
+
+.jumbotron .container {
+    margin-top: 40px;
+	background-repeat: no-repeat;
+    background-position: 90% 100%;
+    background-size: auto 240px;
+    margin-bottom: 10px;
+}
+
+.jumbotron.home .container {
+    text-align:center;
+}
+
+.jumbotron h1 {
+
+    font-size: 4em;
+    /* text-shadow: 2px 2px grey; */
+    color: #ffffff;
+    font-weight:600;
+    margin-bottom: 15px;
+    margin-left: 120px;
+}
+
+.jumbotron.home h1 {
+    /* text-transform: lowercase; */
+    padding-top:120px;
+    color:#ffffff;
+    font-size: 8em;
+    line-height: 0.8em;
+    margin: 0;
+}
+
+.jumbotron h2 {
+    margin-top: 5px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight:700;
+}
+
+@media (max-width: 768px) {
+    .jumbotron .container {
+        padding: 10px 0px;
+    }
+
+    .jumbotron h1 {
+        font-size: 3.2em;
+    }
+}
+
+/** About */
+
+.about h3 {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+/** Announcements */
+
+.announcements-list li {
+    margin-bottom: 20px;
+}
+
+.announcements-list h4 {
+    margin-bottom: 0;
+}
+
+/** Assignments */
+
+.current-link {
+    font-size: 2em;
+    opacity: 0.9;
+}
+
+.current-link .fa {
+    margin-left: 12px;
+    transition: margin 0.1s ease-in;
+}
+
+.current-link:hover {
+    opacity: 1.0;
+}
+
+.current-link a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+.current-link a:hover .fa {
+    margin-left: 12px;
+    transition: margin 0.1s ease-out;
+}
+
+.deadline {
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 30px;
+}
+
+.table td ul {
+    padding-left: 15px;
+}
+
+/** Responsive Tables
+* http://css-tricks.com/responsive-data-tables/
+*/
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #36907b;
+        border-top: 0;
+        margin-bottom: 20px;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        min-height: 2.2em;
+        position: relative;
+        padding-left: 50% !important;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+
+        font-weight: bold;
+    }
+
+    /*
+    Label the data
+    */
+    .assignments td:nth-of-type(1):before { content: "#"; }
+    .assignments td:nth-of-type(2):before { content: "Homework"; }
+    .assignments td:nth-of-type(3):before { content: "Problem Session"; }
+    .assignments td:nth-of-type(4):before { content: "Out"; }
+    .assignments td:nth-of-type(5):before { content: "Due"; }
+    .assignments td:nth-of-type(6):before { content: "Solutions"; }
+
+    .lectures td:nth-of-type(1):before { content: "Date"; }
+    .lectures td:nth-of-type(2):before { content: "Topic"; }
+    .lectures td:nth-of-type(3):before { content: "Book Sections"; }
+}
+
+/* override bootstrap elements*/
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #a1a1a1;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid rgb(156, 189, 182);
+}
+
+/** TA Hours */
+
+#calendar-iframe {
+    width: 1px;
+    min-width: 100%;
+    margin-top: 20px;
+    border-width:0;
+}
+
+.lost-rabbit {
+    display: block;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.staff-update-soon {
+    text-align: center;
+}
+
+/** Lectures */
+
+.lectures tr td:first-child {
+    width: 17%;
+}
+
+.lectures tr th:first-child {
+    width: 17%;
+}
+
+.next-lecture-title {
+    font-size: 1.3em;
+}
+
+tr.next-lecture {
+    background-color: #FFF4DC;
+    color: #36907b;
+}
+
+/** Staff */
+
+.staff .container {
+    overflow: auto;
+}
+
+.staff h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #36907b;
+    margin-bottom: 25px;
+}
+
+.tas h2 {
+    margin-bottom: 10px;
+}
+
+.tas {
+    clear: both;
+}
+
+.staff p {
+    margin-bottom: 0;
+}
+
+.staff ul {
+    list-style: none;
+    padding-left: 0;
+    float: left;
+}
+
+.login {
+    font-family: 'Courier New', Courier;
+}
+
+.pronouns {
+    font-size: 12px
+}
+
+.sw {
+    font-size: 12px;
+}
+
+
+.masonry ul {
+    width: 100%;
+}
+
+.masonry li {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #db907b;
+    /*width: 33%;*/
+}
+
+.info {
+    margin: 15px 0px;
+}
+
+/*.masonry {
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+}*/
+
+@media only screen and (min-width: 400px) {
+    .masonry li {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .masonry li {
+        width: 33%;
+    }
+}
+
+.col-sm-12, .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*.head-tas .container {
+    padding: 0;
+}*/
+
+/*.head-tas .profile-picture {
+    margin-right: 15px;
+    background-image: url('../images/staff/default.png');
+}*/
+
+.profile-picture {
+    height: 300px;
+    width: 300px;
+    /*margin-bottom: 15px;*/
+    background-position: center;
+    /*background-size: auto 100%;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/images/staff/default.png');
+
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.profile-picture:hover {
+    background-size: contain;
+    background-position: center;
+}
+
+/** Footer */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.cafe {
+    width:100%;
+    position:absolute;
+    float:left;
+    bottom:0;
+    z-index: -1;
+    max-height:530px;
+    overflow:hidden;
+
+    /*
+    background-repeat: no-repeat;
+    background-image: url('../images/cafe.jpg');
+    background-size: contain;
+    background-position: center;
+    */
+}
+
+.cafe img {
+    width: 100%;
+    margin-top:-80px;
+}
+
+.textbook img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .footer p:first-child {
+        margin-bottom: 0;
+    }
+
+    .footer .text-right {
+        text-align: left;
+        margin-top: 0;
+    }
+}
+
+/** Staff Pictures */
+
+#cjk .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-cjk.png');
+    background-size: contain;
+    background-position: center;
+}
+#cjk .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/cjk.jpg');
+}
+
+#sbarshay .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-sbarshay.png');
+    background-size: contain;
+    background-position: center;
+}
+#sbarshay .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/sbarshay.jpg');
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#ssimons .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-ssimons.jpg');
+}
+#ssimons .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/ssimons.jpg');
+}
+
+#zshinkar .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-zshinkar.jpg');
+}
+#zshinkar .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/zshinkar.jpg');
+}
+
+#aperez6 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-aperez6.jpg');
+    background-size: contain;
+    background-position: center;
+}
+#aperez6 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/aperez6.jpg');
+}
+
+#awang39 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-awang39.jpg');
+    background-size: contain;
+    background-position: center;
+}
+#awang39 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/awang39.jpg');
+}
+
+#caraujo .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-caraujo.jpg');
+}
+#caraujo .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/caraujo.jpg');
+}
+
+#cjeffers .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-cjeffers.jpg');
+}
+#cjeffers .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/cjeffers.jpg');
+}
+
+#cwang85 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-cwang85.jpg');
+}
+#cwang85 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/cwang85.jpg');
+}
+
+#cwilli2 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-cwilli22.jpg');
+}
+#cwilli2 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/cwilli22.jpg');
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#dbenisvy .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-dbenisvy.jpg');
+}
+#dbenisvy .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/dbenisvy.jpg');
+}
+
+#dcabatin .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-dcabatin.jpg');
+    /* -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg); */
+}
+#dcabatin .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/dcabatin.jpg');
+    /*-webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);*/
+}
+
+#eavril .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-eavril.jpg');
+}
+#eavril .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/eavril.jpg');
+}
+
+#eyouth .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-eyouth.jpg');
+}
+#eyouth .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/eyouth.jpg');
+}
+
+#hsalhab .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-hsalhab.jpg');
+}
+#hsalhab .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/hsalhab.jpg');
+}
+
+#jhuang30 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-jhuang30.jpeg');
+}
+#jhuang30 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/jhuang30.jpeg');
+}
+
+#jmcclel1 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-jmcclel1.jpg');
+}
+#jmcclel1 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/jmcclel1.jpg');
+}
+
+#jwang73 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-jwang73.jpg');
+}
+#jwang73 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/jwang73.jpg');
+}
+
+#jzagorsk .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-jzagorsk.jpg');
+}
+#jzagorsk .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/jzagorsk.png');
+}
+
+#kdu3 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-kdu3.jpg');
+}
+#kdu3 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/kdu3.jpg');
+}
+
+#kpal1 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-kpal1.jpg');
+}
+#kpal1 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/kpal1.jpg');
+}
+
+#ksang1 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-ksang1.jpg');
+}
+#ksang1 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/ksang1.png');
+}
+
+#ktu2 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-ktu2.jpg');
+}
+#ktu2 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/ktu2.jpg');
+}
+
+#lhuang21 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-lhuang21.jpg');
+}
+#lhuang21 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/lhuang21.png');
+}
+
+#lmaskati .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-lmaskati.jpg');
+}
+#lmaskati .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/lmaskati.jpg');
+}
+
+#lwest4 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-lwest4.jpg');
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+#lwest4 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/lwest4.jpg');
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#mkimurat .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-mkimurat.jpg');
+}
+#mkimurat .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/mkimurat.png');
+}
+
+#mchrist .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-mchrist.jpg');
+}
+#mchrist .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/mchrist.jpg');
+}
+
+#mcontre4 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-mcontre4.jpg');
+}
+#mcontre4 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/mcontre4.jpg');
+}
+
+#mnisenzo .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-mnisenzo.jpg');
+}
+#mnisenzo .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/mnisenzo.jpg');
+}
+
+#pkelly1 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-pkelly1.png');
+}
+#pkelly1 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/pkelly1.jpeg');
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#psyrgkan .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-psyrgkan.png');
+}
+#psyrgkan .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/psyrgkan.jpg');
+}
+
+#sgerry .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-sgerry.jpg');
+}
+#sgerry .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/sgerry.jpg');
+}
+
+#snathan2 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-snathan2.jpg');
+}
+#snathan2 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/snathan2.jpg');
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+#tdefrosc .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-tdefrosc.png');
+}
+#tdefrosc .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/tdefrosc.png');
+}
+
+#wzhang31 .profile-picture {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/fun/s-wzhang31.jpg');
+}
+#wzhang31 .profile-picture:hover {
+    background-image: url('https://cs.brown.edu/courses/csci0220/static/css/ ../images/staff/real/wzhang31.jpg');
+}
+
+
