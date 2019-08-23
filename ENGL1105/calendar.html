@@ -68,20 +68,19 @@
                 <p>We will work on developing specific skills which will be useful for your upcoming projects. Occasionally, I will give a brief lecture. </p>
             <h4>Wednesdays - Discussion</h4>
                 <p>
-                    These dicussions will be about an assigned reading. Your reading respone is due at 8:00AM each Tuesday.These responses are to be pasted into a group Google Doc, the link for which you can find below. Two students will be named discussion leaders each week, and will be responsible for reading everyone's responses, bringing in at least 5 questions for discussion, and keeping the discussion going.
+                    These dicussions will be about an assigned reading. Your reading respone is due at 8:00AM each Tuesday and must be at least 150 words. These responses are to be pasted into a group Google Doc, the link for which you can find below. Two students will be named discussion leaders each week, and will be responsible for reading everyone's responses, keeping the discussion going, and trying to address the questions I have raised.
                 </p>
             <h4>Fridays - Project Day</h4>
                 <p>
                     On project days we will do an activity which will become part of your project. These activities may take the form of brainstorms, peer review, or something else.
                 </p>
             <h4>Journal</h4>
-            <p>We will be doing prompted journal writing for 10 minutes at the beginning of each class. This writing must go into a Google Doc in your Google Drive folder.</p>
+            <p>We will be doing prompted journal writing for 10 minutes at the beginning of each class. This writing must go into a Google Doc in your Google Drive folder. Each week, I will provide light, ungraded feedback on your journal.</p>
             <table class="table lectures">
                 <thead>
                     <tr>
                         <th>Date</th>
                         <th>Topics</th>
-                        <th>Lesson Plan</th>
                         <th>Due</th>
                     </tr>
                 </thead>
@@ -105,22 +104,38 @@
     </footer>
     <!-- Javascript -->
         <!--Load file for CSV-->
+
     <script>
-        var csv = $.get("http://dashielcarrera.com/ENGL1105/static/docs/Calendar.csv").responseText;
-        //csv = 'date,topic,lesson plan,due'
+        var csv = `Mon 8/26,Introduction and Course Overview,
+Wed 8/28,"Introduce each other exercise, Establish Peer Review Guidelines",Intro essay due printed and brought to class
+Fri 8/30,Project 1 Intro and Brainstorm Activity,
+Mon 9/2,<b>Labor Day</b>,
+Wed 9/4,Memories and Hope: Top College Essays,"Read <a href=""https://www.nytimes.com/interactive/2016/05/12/your-money/student-college-essays-about-money.html?mtrref=www.google.com&assetType=REGIWALL"">Top College Essays</a>"
+Fri 9/6,Writing in Scenes Activity,
+Mon 9/9,Shitty First Drafts Exercise,"<a href=""https://wrd.as.uky.edu/sites/default/files/1-Shitty%20First%20Drafts.pdf"">Read ""Shitty First Drafts""</a>"
+Wed 9/11,Malcolm X's Learning to Read,"<a href=""https://ptfaculty.gordonstate.edu/jmallory/index_files/page0096.htm"">Read Learning to Read by Malcolm X</a>"
+Fri 9/13,Peer Review of Project 1,Project 1 Draft Due
+Mon 9/16,What the Heck is Genre?,
+Wed 9/18,How Tracey Austin Broke My Heart By DFW,"<a href=""https://www.scribd.com/doc/134106158/How-Tracy-Austin-Broke-My-Heart-David-Foster-Wallace"">Read HTABMH</a> or <a href=""https://www.youtube.com/watch?v=U7BYK0hZibk"">Listen</a>"
+Fri 9/20,Project 2 Intro Activity and Conference Signups,Project 1 Due
+Mon 9/23,<b>Conferences</b>,
+Wed 9/25,<b>Conferences</b>,
+Fri 9/27,<b>Conferences</b>,
+`;
+    </script>
+
+    <script>
         var arrays = $.csv.toArrays(csv);
 
         for (var i=0; i<arrays.length;i++){
             var new_row = $('<tr></tr>');
             for (var j=0; j<arrays[0].length;j++){
-                var entry = $('<td></td>').text(arrays[i][j]);
+                var entry = $('<td></td>').html(arrays[i][j]);
                 new_row.append(entry);
             }
             $('tbody').append(new_row);
         }
     </script>
-    <script src="static/js/moment.min.js"></script>
-    <script src="static/js/lectures.js"></script>
 </body>
 
 </html>
