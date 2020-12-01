@@ -33,6 +33,7 @@ font-family: Baskerville;
 /* =Common Styles */
 /***********************************************************************************************/
 
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #888888;
@@ -42,7 +43,9 @@ body {
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.4px;
   padding-bottom: 30px;
+    background-color: black;
 }
+
 
 .boxed-body {
   padding: 0 40px 0px 40px;
@@ -179,7 +182,7 @@ a {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 500;
-  color: #1f2021;
+  color: #a6a9ad;
   text-transform: uppercase;
   line-height: 1.3;
   font-family: 'Playfair Display', serif;
@@ -199,7 +202,7 @@ h1, .h1 {
 }
 
 h2 {
-  color: #333;
+  /*color: #333;*/
   letter-spacing: .2px;
   line-height: 1.1;
   font-size: 32px;
@@ -209,7 +212,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  color: #434343;
+  color: #b9b2b2;
   margin: 0 0 18px;
   line-height: 1.5;
   text-transform: capitalize;
@@ -218,7 +221,7 @@ h3 {
 h4 {
   font-size: 20px;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 525;
   letter-spacing: .9px;
   text-transform: capitalize;
 }
@@ -243,7 +246,7 @@ h6 {
 p {
   margin: 0 0 15px;
   font-size: 14px;
-  color: #4d4d4d;
+  color: #888484;
   line-height: 24px;
   letter-spacing: 1px;
   font-family: 'Playfair Display', serif;
@@ -287,8 +290,8 @@ ul {
 /***********************************************************************************************/
 
 .navbar-default {
-  background: #fff;
-  border-color: #f3f3f3
+  background: #000;
+  border-color: #2e2e2e
 }
 
 .navbar {
@@ -405,8 +408,7 @@ right: 0px;
 min-width: 100%;
 min-height: 100%;
 left: 0px;
-/*width: auto;
-#height: 100%;*/
+object-fit: cover;
 z-index: -1000;
 overflow: hidden
 }
@@ -903,6 +905,7 @@ ul.testimonials-slider h4, ul.testimonials-slider small {
   text-transform: capitalize;
   line-height: 32px;
   display: inline-block;
+  /*padding-right: 20px;*/
   width: 20%;
 }
 
@@ -1188,11 +1191,11 @@ h6.email-address {
   left: 0;
   width: 100%;
   height: 50px;
-  background: #fff;
+  background: #000;
   z-index: 15;
   padding: 0 50px;
   line-height: 50px;
-  border-top: 1px solid #f3f3f3;
+  border-top: 1px solid #2e2e2e;
 }
 
 .policy-box ul li {
@@ -1208,7 +1211,7 @@ h6.email-address {
   display: inline-block;
 }
 
-.policy-box ul li:first-child span:after {
+/*.policy-box ul li:first-child span:after {
   content: '';
   position: absolute;
   top: 17px;
@@ -1216,7 +1219,7 @@ h6.email-address {
   background: #eee;
   width: 2px;
   height: 20px;
-}
+}*/
 
 .policy-box ul li a {
   padding: 0 10px;

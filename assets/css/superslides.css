@@ -5,7 +5,8 @@
 
 #slides .slides-container,
 #slides-2 .slides-container {
-	display: none;
+	/*display: none;*/
+	object-fit: cover;
 }
 
 #slides .scrollable,

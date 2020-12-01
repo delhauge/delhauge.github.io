@@ -19,12 +19,12 @@ $(document).ready(function() {
 
     document.title="Dashiel Carrera";
     $('.policy-box').html(`<ul>
-                <li><span>© Dashiel Carrera 2018 . All rights reserved. </span></li>
-                <li><a href="mailto:dashiel.carrera@gmail.com">dashiel.carrera@gmail.com</a></li>
+                <li><span>© Dashiel Carrera 2020. All rights reserved. </span></li>
+                
               </ul>`);
     $('.fixed-footer-social').html(`<ul>
                 <li><a href="https://twitter.com/dashiel_carrera" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/delhauge" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/dash-carrera" target="_blank"><i class="fa fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/dashiel-carrera/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
               </ul>`);
@@ -52,13 +52,13 @@ $(document).ready(function() {
         Hero slider
     =============================================== */
 
-        $('#slides').superslides({
-            play: 10000,
-            animation_speed: 800,
-            pagination: true,
-            navigation: false,
-            animation: 'fade'
-        });
+        // $('#slides').superslides({
+        //     play: 10000,
+        //     animation_speed: 800,
+        //     pagination: true,
+        //     navigation: false,
+        //     animation: 'fade'
+        // });
 
         window.mobilecheck = function() {
           var check = false;

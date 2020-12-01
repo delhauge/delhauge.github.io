@@ -11,19 +11,22 @@ $(document).ready(function() {
         Consistent template edits to each page
     =============================================== */
     document.title="Dashiel Carrera";
-    $('nav li:eq(1)').after('<li><a href="publications.html">Publications</a></li>');
+    
     $('.policy-box').html(`<ul>
-                <li><span>© Dashiel Carrera 2018 . All rights reserved. </span></li>
+                <li><span>© Dashiel Carrera 2020 . All rights reserved. </span></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com">dashiel.carrera@gmail.com</a></li>
               </ul>`);
     $('.fixed-footer-social').html(`<ul>
                 <li><a href="https://twitter.com/dashiel_carrera" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/delhauge" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/dash-carrera" target="_blank"><i class="fa fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/dashiel-carrera/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="mailto:dashiel.carrera@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
               </ul>`);
-    if ($('nav li:eq(4)').text()=='Skills')
-        $('nav li:eq(4)').remove();
+    $('.nav').html(`<li><a href="index.html#top">Home</a></li>
+            <li><a href="index.html#portfolio-section">Portfolio</a></li>
+             <li><a href="publications.html">Publications</a></li>
+             <li><a href="index.html#about-us-sction">About</a></li>
+            <li><a href="cv.html">CV</a></li>`);
 
     /* ==============================================
         Full height home-section
@@ -46,13 +49,6 @@ $(document).ready(function() {
         Hero slider
     =============================================== */
 
-        $('#slides').superslides({
-            play: 10000,
-            animation_speed: 800,
-            pagination: true,
-            navigation: false,
-            animation: 'fade'
-        });
 
         window.mobilecheck = function() {
           var check = false;
